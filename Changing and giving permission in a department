@@ -1,0 +1,64 @@
+researcher2@6550d5eefade:~$ cd projects
+researcher2@6550d5eefade:~/projects$ ls -l
+total 20
+drwx--x--- 2 researcher2 research_team 4096 Jun 14 15:52 drafts
+-rw-rw-rw- 1 researcher2 research_team   46 Jun 14 15:52 project_k.txt
+-rw-r----- 1 researcher2 research_team   46 Jun 14 15:52 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_t.txt
+researcher2@6550d5eefade:~/projects$ ls -la
+total 32
+drwxr-xr-x 3 researcher2 research_team 4096 Jun 14 15:52 .
+drwxr-xr-x 3 researcher2 research_team 4096 Jun 14 15:54 ..
+-rw--w---- 1 researcher2 research_team   46 Jun 14 15:52 .project_x.txt
+drwx--x--- 2 researcher2 research_team 4096 Jun 14 15:52 drafts
+-rw-rw-rw- 1 researcher2 research_team   46 Jun 14 15:52 project_k.txt
+-rw-r----- 1 researcher2 research_team   46 Jun 14 15:52 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_t.txt
+researcher2@6550d5eefade:~/projects$ ls -l
+total 20
+drwx--x--- 2 researcher2 research_team 4096 Jun 14 15:52 drafts
+-rw-rw-rw- 1 researcher2 research_team   46 Jun 14 15:52 project_k.txt
+-rw-r----- 1 researcher2 research_team   46 Jun 14 15:52 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_t.txt
+researcher2@6550d5eefade:~/projects$ chmod o-w project_k.txt     
+researcher2@6550d5eefade:~/projects$ ls -l
+total 20
+drwx--x--- 2 researcher2 research_team 4096 Jun 14 15:52 drafts
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_k.txt
+-rw-r----- 1 researcher2 research_team   46 Jun 14 15:52 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_t.txt
+researcher2@6550d5eefade:~/projects$ chmod g-r project_m.txt
+researcher2@6550d5eefade:~/projects$ ls -la
+total 32
+drwxr-xr-x 3 researcher2 research_team 4096 Jun 14 15:52 .
+drwxr-xr-x 3 researcher2 research_team 4096 Jun 14 15:54 ..
+-rw--w---- 1 researcher2 research_team   46 Jun 14 15:52 .project_x.txt
+drwx--x--- 2 researcher2 research_team 4096 Jun 14 15:52 drafts
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_k.txt
+-rw------- 1 researcher2 research_team   46 Jun 14 15:52 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_t.txt
+researcher2@6550d5eefade:~/projects$ chmod u-w,g-w,g+r .project_x.txt
+researcher2@6550d5eefade:~/projects$ ls -la
+total 32
+drwxr-xr-x 3 researcher2 research_team 4096 Jun 14 15:52 .
+drwxr-xr-x 3 researcher2 research_team 4096 Jun 14 15:54 ..
+-r--r----- 1 researcher2 research_team   46 Jun 14 15:52 .project_x.txt
+drwx--x--- 2 researcher2 research_team 4096 Jun 14 15:52 drafts
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_k.txt
+-rw------- 1 researcher2 research_team   46 Jun 14 15:52 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_t.txt
+researcher2@6550d5eefade:~/projects$ chmod g-x drafts
+researcher2@6550d5eefade:~/projects$ ls -l
+total 20
+drwx------ 2 researcher2 research_team 4096 Jun 14 15:52 drafts
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_k.txt
+-rw------- 1 researcher2 research_team   46 Jun 14 15:52 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Jun 14 15:52 project_t.txt
+researcher2@6550d5eefade:~/projects$
